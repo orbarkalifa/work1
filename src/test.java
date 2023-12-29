@@ -1,7 +1,6 @@
 //import java.io.*;
 //import java.util.Scanner;
 //public class test {
-//
 //    public static void main(String[] args) throws FileNotFoundException {
 //        File cs = new File("CS.txt");
 //        File hedva = new File("hedva.txt");
@@ -16,13 +15,13 @@
 //        while (csIn.hasNext() && hedvaIn.hasNext()) {
 //
 //            if (id1 < id2){
-//                    csIn.nextLine();
-//                    name = csIn.next() + " " + csIn.next();
-//                    id1 = csIn.nextInt();
+//                csIn.nextLine();
+//                name = csIn.next() + " " + csIn.next();
+//                id1 = csIn.nextInt();
 //
 //            } else if (id1 > id2) {
 //                hedvaIn.nextLine();
-//                    id2 = hedvaIn.nextInt();
+//                id2 = hedvaIn.nextInt();
 //
 //            } else {
 //                String out = (id1 + " " + name + " " + (hedvaIn.nextInt()+ hedvaIn.nextInt())/2);
@@ -33,9 +32,10 @@
 //                    hedvaIn.nextLine();
 //                    id2 = hedvaIn.nextInt();
 //                }
-//
 //            }
 //        }
+//
+//        if (id1 == id2) writer.println(id1 + " " + name + " " + (csIn.nextInt() + hedvaIn.nextInt()) / 2);
 //
 //        writer.close();
 //        csIn.close();

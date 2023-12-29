@@ -17,33 +17,33 @@ public class Main {
         String fName = depInput.next();
         String lName = depInput.next();
         int depID = depInput.nextInt();
-        int courseID= courseInput.nextInt();
+        int courseID = courseInput.nextInt();
 
-        while (depInput.hasNext() && courseInput.hasNext()) {
+        while (courseInput.hasNext() && depInput.hasNext()) {
 
             if (depID < courseID) {
-                fName = depInput.next();
-                lName = depInput.next();
-                depID = depInput.nextInt();
-
+                if (depInput.hasNext()) {
+                    fName = depInput.next();
+                    lName = depInput.next();
+                    depID = depInput.nextInt();
+                }
             } else if (depID > courseID) {
                 courseInput.nextLine();
                 if (courseInput.hasNext()) courseID = courseInput.nextInt();
 
             } else {
-                writer.println(depID + " " + fName + " " + lName + " " + (courseInput.nextInt() + courseInput.nextInt())/2);
-                fName = depInput.next();
-                lName = depInput.next();
-                depID = depInput.nextInt();
-
+                writer.println(depID + " " + fName + " " + lName + " " + (courseInput.nextInt() + courseInput.nextInt()) / 2);
+                if (depInput.hasNext()) {
+                    fName = depInput.next();
+                    lName = depInput.next();
+                    depID = depInput.nextInt();
+                }
             }
         }
+        if (depID == courseID) writer.println(depID + " " + fName + " " + lName + " " + (courseInput.nextInt() + courseInput.nextInt()) / 2);
 
         writer.close();
         depInput.close();
         courseInput.close();
     }
-
-
-
 }
