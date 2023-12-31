@@ -18,11 +18,11 @@ public class Main {
         String fName = depInput.next();
         String lName = depInput.next();
         int depID = depInput.nextInt();
-        int courseID= courseInput.nextInt();
+        int courseID = courseInput.nextInt();
 
-        while (depInput.hasNext() && courseInput.hasNext()) {
+        while (courseInput.hasNext() && depInput.hasNext()) {
 
-            if (depID < courseID) { //id in course is higher so we read in dep
+          if (depID < courseID) { //id in course is higher so we read in dep
                 fName = depInput.next();
                 lName = depInput.next();
                 depID = depInput.nextInt();
@@ -44,7 +44,5 @@ public class Main {
         depInput.close();
         courseInput.close();
     }
-
-
-
 }
+
